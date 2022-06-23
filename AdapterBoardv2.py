@@ -182,7 +182,7 @@
 
 
 
-            cv.putText(black, 'CAM ' + index, bottomLeftCornerOfText, font, fontScale, fontColor, lineType)
+            cv.putText(black, 'CAM ' + 'C', bottomLeftCornerOfText, font, fontScale, fontColor, lineType)
             cv.imshow("Arducam Multi Camera Demo", black)
             if cv.waitKey(1) & 0xFF == ord('q'):
                 del frame
@@ -208,9 +208,9 @@
 
             black[factor * 2 + height:factor * 2 + height * 2, width:width * 2, :] = frame
             bottomLeftCornerOfText = (factor + width, factor * 2 + height)
-            
 
-            cv.putText(black, 'CAM ' + index, bottomLeftCornerOfText, font, fontScale, fontColor, lineType)
+
+            cv.putText(black, 'CAM ' + 'D', bottomLeftCornerOfText, font, fontScale, fontColor, lineType)
             cv.imshow("Arducam Multi Camera Demo", black)
             if cv.waitKey(1) & 0xFF == ord('q'):
                 del frame
@@ -218,3 +218,7 @@
                 cv.destroyAllWindows()
                 break
 
+        previewOne()
+        previewTwo()
+        previewThree()
+        previewFour()
